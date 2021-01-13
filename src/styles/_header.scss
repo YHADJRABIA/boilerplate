@@ -1,0 +1,36 @@
+// Navigation bar
+nav {
+  min-height: 10vh;
+  width: 100%;
+  @include flexCenter(row);
+  position: sticky;
+  top: 0;
+  background-color: $navColour;
+  z-index: 2;
+}
+
+// Navigation menu
+.nav-links {
+  & li {
+    & a {
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+/*---------- Animations --------*/
+
+/*------------- Reponsive ---------*/
+// Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  // Desktop
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+  }
+}

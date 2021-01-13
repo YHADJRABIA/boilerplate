@@ -1,0 +1,113 @@
+// @author Yacine Hadj Rabia
+
+//Fonts
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Oswald|Press+Start+2P|Audiowide|Lobster");
+
+/*------------------------------- Sass parameters ---------------------------------------*/
+//Font types
+$primaryFont: "Permanent Marker";
+$secondaryFont: "Audiowide";
+$regularFont: "Oswald";
+
+//Colours
+$primaryColour: #1b1a1a;
+$secondaryColour: #f2f2f5;
+$thirdColour: #fff;
+$navColour: #00008c;
+$spanColour: #ffce00;
+$secondaryBorder: 1px solid #dcd9d9;
+
+/*- Centred flex -*/
+@mixin flexCenter($direction) {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-flow: wrap $direction;
+}
+
+/*- Reset params -*/
+@mixin initialProperties {
+  position: initial;
+  min-height: inherit;
+  transform: none;
+}
+
+/*------------------------------ Global parameters ------------------------------------*/
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: $regularFont;
+  background-color: inherit;
+}
+
+/* Responsive calibration — 1rem = 10px, footer adjustment */
+html {
+  font-size: 62.5%;
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  //overflow-x: hidden;
+  @include flexCenter(row);
+  min-height: 100%;
+}
+
+button {
+}
+
+/* Fonts */
+h1 {
+}
+
+h2 {
+}
+
+h5 {
+}
+
+p {
+}
+
+/* Various */
+
+i {
+}
+
+span {
+}
+
+ul {
+}
+
+a {
+  cursor: pointer;
+}
+
+/*---------- Reponsive parameters ---------*/
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+) !default;
+
+/* Effects and animations */
+
+/*--- Imports ---*/
+@import "./header";
+@import "./main";
+@import "./footer";
+
+/*------------- Reponsive ---------*/
+//Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  //Desktop
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+  }
+}
