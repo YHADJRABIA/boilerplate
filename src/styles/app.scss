@@ -11,17 +11,18 @@ $secondaryFont: "Audiowide";
 $regularFont: "Oswald";
 
 //Colours
-$primaryColour: #1b1a1a;
-$secondaryColour: #f2f2f5;
-$thirdColour: #fff;
-$navColour: #00008c;
-$spanColour: #ffce00;
-$secondaryBorder: 1px solid #dcd9d9;
+$primaryColour: #f1f1f1;
+$secondaryColour: #8b8b8b;
+$topNav-colour: #f1f1f1;
+$bottomNav-colour: #fff;
+$searchIcon-colour: #a8adbf;
+$footerColour: #bcbabb;
+$buttonColour: #858989;
+$bottomBorder: 2px groove #bdbdbd;
 
 /*- Centred flex -*/
 @mixin flexCenter($direction) {
   display: flex;
-  align-content: center;
   align-items: center;
   flex-flow: wrap $direction;
 }
@@ -38,7 +39,7 @@ $secondaryBorder: 1px solid #dcd9d9;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
   font-family: $regularFont;
@@ -55,11 +56,10 @@ html {
 
 body {
   //overflow-x: hidden;
-  @include flexCenter(row);
-  min-height: 100%;
-}
-
-button {
+  //@include flexCenter(row);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 /* Fonts */
@@ -78,6 +78,11 @@ p {
 /* Various */
 
 i {
+  cursor: pointer;
+}
+
+img {
+  cursor: pointer;
 }
 
 span {
@@ -86,8 +91,12 @@ span {
 ul {
 }
 
+li {
+}
+
 a {
   cursor: pointer;
+  color: inherit;
 }
 
 /*---------- Reponsive parameters ---------*/
@@ -98,6 +107,8 @@ $breakpoints: (
 ) !default;
 
 /* Effects and animations */
+
+/*---- Animations ----*/
 
 /*--- Imports ---*/
 @import "./header";
